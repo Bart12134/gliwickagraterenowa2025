@@ -1,352 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gliwicka Gra Terenowa 2025 — 23 października</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
-  <meta name="description" content="Gliwicka Gra Terenowa 2025 — start na Rynku, 23 października o 12:00. Gra dla wszystkich!">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strona w budowie</title>
   <style>
-    :root{
-      --bg:#050507;
-      --card:#0b0b10;
-      --neon1:#00f0ff;
-      --neon2:#b300ff;
-      --muted:#9aa0a6;
-      --accent:linear-gradient(90deg,var(--neon1),var(--neon2));
-      --glass: rgba(255,255,255,0.03);
+    :root {
+      /* --to i to: kolory gradientów */
+      --gradient1: #00f0ff;
+      --gradient2: #b300ff;
     }
 
-    /* animowane tęczowe ramki */
-    .hero, aside, .info-card {
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #050507;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .box {
       position: relative;
-      border-radius: 12px;
-      border: 3px solid transparent;
-      background:
-        linear-gradient(#0b0b10, #0b0b10) padding-box,
-        linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red) border-box;
-      background-size: 200% 100%, 200% 100%;
-      background-position: 0% 0%, 0% 0%;
-      animation: rainbow-border 6s linear infinite;
-    }
-
-    @keyframes rainbow-border {
-      0%   { background-position: 0% 0%,   0% 0%; }
-      100% { background-position: 200% 0%, 200% 0%; }
-    }
-
-    h1,html,body{height:100%}
-    body{
-      margin:0;
-      font-family:'Inter',system-ui,Arial,sans-serif;
-      background:
-        radial-gradient(1200px 600px at 10% 10%, rgba(179,0,255,0.06), transparent 6%),
-        radial-gradient(900px 400px at 90% 90%, rgba(0,240,255,0.04), transparent 6%),
-        var(--bg);
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      overflow-x:hidden;
-      padding:40px 20px;
-    }
-
-    .wrap{
-      max-width:1000px;
-      margin:0 auto;
-      display:grid;
-      grid-template-columns: 1fr 380px;
-      gap:28px;
-      align-items:start;
-    }
-
-    header{
-      grid-column:1 / -1;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      margin-bottom:4px;
-    }
-
-    .logo{
-      display:flex;
-      gap:14px;
-      align-items:center;
-    }
-    .logo-badge{
-      width:56px;height:56px;border-radius:12px;
-      background:conic-gradient(from 180deg at 50% 50%, rgba(0,240,255,0.12), rgba(179,0,255,0.12));
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:0 6px 30px rgba(0,0,0,0.6), inset 0 -6px 18px rgba(0,0,0,0.25);
-      border:1px solid rgba(255,255,255,0.04);
-      font-weight:900;color:transparent;
-      -webkit-mask: radial-gradient(circle at 30% 30%, #000 10%, transparent 11%);
-    }
-    .title{
-      line-height:1;
-    }
-    .title h1{
-      margin:0;font-size:20px;letter-spacing:-0.5px;
-      background:var(--accent);
-      -webkit-background-clip:text;color:transparent;
-    }
-    .title p{margin:0;color:var(--muted);font-size:13px}
-
-    /* MAIN CARD */
-    .hero{
-      padding:28px;
+      padding: 40px 60px;
+      border-radius: 16px;
+      background-color: #0b0b10;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.5;
+      color: #fff;
+      /* box-shadow do głębi */
       box-shadow: 0 10px 40px rgba(0,0,0,0.6);
     }
 
-    .hero .eyebrow{
-      font-size:13px;color:var(--neon1);font-weight:700;
-      letter-spacing:1px;text-transform:uppercase;
-      display:inline-block;margin-bottom:12px;
-      text-shadow:0 4px 26px rgba(0,240,255,0.06);
-    }
-footer {
-  position: left;
-  padding: 5px;
-  max-width: 300px;
-  margin: 20px auto 0;
-  border-radius: 16px;
-  background: #111; /* ciemne tło */
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* Animowana gradientowa obwódka */
-footer::before {
-  width:56px;height:56px;border-radius:12px;
-      background:conic-gradient(from 180deg at 50% 50%, rgba(0,240,255,0.12), rgba(179,0,255,0.12));
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:0 6px 30px rgba(0,0,0,0.6), inset 0 -6px 18px rgba(0,0,0,0.25);
-      border:1px solid rgba(255,255,255,0.04);
-      font-weight:900;color:transparent;
-      -webkit-mask: radial-gradient(circle at 30% 30%, #000 10%, transparent 11%);
-}
-
-/* Gradientowy tekst w footerze */
-footer p {
-  margin: 0;
-  font-weight: bold;
-  background: linear-gradient(90deg, #8a2be2, #00f0ff, #8a2be2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-    .hero h2{
-      margin:0 0 12px 0;font-size:36px;
-      background:linear-gradient(90deg,var(--neon1),var(--neon2));
-      -webkit-background-clip:text;color:transparent;
-      text-shadow: 0 6px 32px rgba(179,0,255,0.06);
+    /* animowana ramka gradientowa */
+    .box::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 16px;
+      padding: 3px;
+      background: linear-gradient(90deg, var(--gradient1), var(--gradient2));
+      background-size: 200% auto;
+      animation: rainbow 6s linear infinite;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
     }
 
-    .meta{
-      display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;
-    }
-    .chip{
-      background:var(--glass);
-      padding:8px 12px;border-radius:12px;font-size:13px;color:var(--muted);
-      display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,0.02);
-    }
-    .chip strong{color:#fff;font-weight:700}
-
-    .desc{
-      color:#d8e6ff;line-height:1.5;margin-bottom:18px;font-size:15px;
-    }
-
-    .cta-row{
-      display:flex;gap:12px;align-items:center;
-    }
-    .btn{
-      display:inline-block;padding:12px 18px;border-radius:12px;font-weight:700;
-      color:#061018;background:var(--neon1);
-      border:none;cursor:pointer;text-decoration:none;
-      box-shadow: 0 8px 30px rgba(0,240,255,0.08), 0 1px 0 rgba(255,255,255,0.04) inset;
-      transition:transform .18s ease, box-shadow .18s ease;
-    }
-    .btn.secondary{
-      background:transparent;border:1px solid rgba(255,255,255,0.06);color:#cfe9ff;
-      box-shadow:none;
-    }
-    .btn:hover{transform:translateY(-3px);}
-	
-	footer {
-  text-align: center;
-  padding: 15px;
-  background: #111;
-  color: #ccc;
-  font-size: 14px;
-}
-
-footer .line {
- fo:linear-gradient(90deg,var(--neon1),var(--neon2));
-      -webkit-background-clip:text;color:transparent;
-      text-shadow: 0 6px 32px rgba(179,0,255,0.06);
-}
-
-footer .line::after {
-  content: ""; /* gwiazdka */
-  position: absolute;
-  left: -20px; /* start poza linią */
-  top: -6px; /* centrowanie w pionie */
-  font-size: 7px;
-  color: #fff;
-  text-shadow: 0 0 4px #fff, 0 0 8px #8a2be2;
-  animation: moveStar 9s linear infinite;
-}
-
-@keyframes moveStar {
-  0% { left: -20px; }
-  100% { left: 100%; }
-}
-    /* SIDEBAR */
-    aside{
-      padding:20px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.65);
-      position:relative;
-    }
-    .when{color:var(--muted);font-size:13px;margin-bottom:12px;}
-    .big-time{font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-0.5px;}
-    .duration{color:var(--muted);font-size:13px;margin-bottom:12px}
-
-    .organizers{margin-top:12px}
-    .org-item{display:flex;gap:12px;align-items:center;margin-bottom:12px}
-    .org-logo{
-      width:46px;height:46px;border-radius:10px;background:linear-gradient(90deg,#0f1720,#081018);
-      display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:800;
-      border:1px solid rgba(255,255,255,0.03)
-    }
-    .org-name{font-size:14px;color:#eaf6ff;font-weight:700}
-    .org-sub{font-size:12px;color:var(--muted)}
-
-    /* FOOTER / INFO */
-    .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:18px}
-    .info-card{padding:10px;font-size:13px;color:var(--muted)}
-    .note{margin-top:16px;color:#9fb6d0;font-size:13px}
-
-    /* fancy animated map-like wave */
-    .grid-lines{
-      position:absolute;inset:0;pointer-events:none;border-radius:14px;overflow:hidden;opacity:0.06;
-      background-image:linear-gradient(transparent 49%, rgba(255,255,255,0.03) 50%), linear-gradient(90deg, transparent 49%, rgba(255,255,255,0.03) 50%);
-      background-size: 100% 40px, 40px 100%;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width:980px){
-      .wrap{grid-template-columns:1fr; padding-bottom:40px}
-      aside{order:3}
-    }
-
-    /* animacja tęczowego tekstu */
     @keyframes rainbow {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
+      0% { background-position: 0% 0%; }
+      100% { background-position: 200% 0%; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap" role="main">
-    <header>
-      <div class="logo">
-        <div class="logo-badge" aria-hidden="true">
-          <h1 style="font-size:120px; text-align:center; margin:40px 0; font-weight:900; color:#fff;">
-            TO JEST TYLKO PROJEKT SZKOLNY
-          </h1>
-        </div>
-        <div class="title">
-          <h1>Gliwicka Gra Terenowa 2025</h1>
-          <span style="
-            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: rainbow 10s linear infinite;
-            font-weight: 600;
-          ">
-            TO TYLKO PROJEKT NA INFORMATYKĘ!!! - RZECZY PRZEDSTAWIONE NA TEJ STRONIE SĄ FIKCYJNE!!!
-          </span>
-          <p>23 października — start: Rynek Gliwicki, 12:00</p>
-        </div>
-      </div>
-
-      <div style="text-align:right">
-        <div style="font-size:13px;color:var(--muted)">Organizator:</div>
-        <div style="font-weight:800;color:#fff">Miasto Gliwice · Centrum Kultury Gliwice</div>
-      </div>
-    </header>
-
-    <section class="hero" aria-labelledby="main-title">
-      <div class="eyebrow">Wydarzenie miejskie</div>
-      <h2 id="main-title">Gliwicka Gra Terenowa 2025 - Wszystkie rzeczy na tej stronie są fikcyjne, wymyślone na potrzeby projektu z informatyki!!!</h2>
-
-      <div class="meta" role="list">
-        <div class="chip" role="listitem"><strong>Data:</strong>23 października 2025</div>
-        <div class="chip" role="listitem"><strong>Start:</strong>Rynek Gliwicki, 12:00</div>
-        <div class="chip" role="listitem"><strong>Czas gry:</strong>~3–5 godzin</div>
-        <div class="chip" role="listitem"><strong>Dla kogo:</strong>Wszystkie grupy wiekowe</div>
-      </div>
-
-      <p class="desc">
-        Gotów na miejską przygodę z zagadkami i zadaniami? Gliwicka Gra Terenowa to
-        trasa po ciekawych punktach miasta, logiczne wyzwania i zabawne misje — wszystko w jednym, planowane na około 3-5 godzin.
-        Startujemy razem na Rynku — przyjdź punktualnie. Dobra atomsfera i świetna zabawa gwarantowane!
-      </p>
-
-      <div class="cta-row">
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSceU8nfwmp2Mt2Z8ugFpVsTgmrI_62dzidQ3zK-Y9xrbSNs1Q/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">ZAPISZ SIĘ TERAZ</a>
-      </div>
-    </section>
-
-    <aside aria-labelledby="side-title">
-      <div class="grid-lines" aria-hidden="true"></div>
-      <div class="when">Kiedy i gdzie</div>
-      <div class="big-time">23 października 2025 — start 12:00</div>
-      <div class="duration">Planowany czas trwania: <strong>3–5 godzin</strong></div>
-
-      <div class="organizers">
-        <div class="org-item">
-          <div class="org-logo">MG</div>
-          <div>
-            <div class="org-name">Miasto Gliwice</div>
-            <div class="org-sub">Oficjalny organizator wydarzenia</div>
-          </div>
-        </div>
-
-        <div class="org-item">
-          <div class="org-logo">CK</div>
-          <div>
-            <div class="org-name">Centrum kultury Gliwice</div>
-            <div class="org-sub">Sponsor główny</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="info-grid" id="more">
-        <div class="info-card">
-          <strong>Start:</strong><br>Rynek Gliwicki (zbiórka przed Ratuszem)
-        </div>
-        <div class="info-card">
-          <strong>Wiek:</strong><br>otwarte dla wszystkich
-        </div>
-        <div class="info-card">
-          <strong>Opłata:</strong><br>bezpłatnie
-        </div>
-      </div>
-    </aside>
-        </div>
-      </div>
-    </div>
+  <div class="box">
+    Strona w budowie. Zapraszamy na otwarcie 10 październik 2025 o godzinie 10:00
   </div>
-
-<footer>
-  <div class="line"></div>
-  <p>© 2025 Bartłomiej Lach klasa 3C</p>
-</footer>
-
-
-  </footer>
 </body>
 </html>
